@@ -47,6 +47,31 @@ if(isset($_POST['enviar'])){
 		$error = $e->getMessage();
 	}
 }
+//MUESTRA TABLA DE MENSAJES
+$contenido_tabla = '';
+//valida que existe el fichero
+if(file_exists('files/mensajes.txt')){
+	//lectura linia a linea en array
+	$arrayLineas = file('files/mensajes.txt');
+	//print_r($arrayLineas);
+	$array_fila = '';
+	foreach ($arrayLineas as $linea) {
+		//extraer datos separados por caracter ;
+		$array_fila = explode(';', $linea);
+		//print_r($array_fila);
+		$contenido_tabla .= '<tr>';
+		$td = '';
+		//extraer dato columna por linea
+		foreach ($array_fila as $dato_columna) {
+			//echo $dato_columna;
+			$td .= "<td>$dato_columna</td>";
+		}
+		$contenido_tabla .= $td;
+		$td = '';
+		$contenido_tabla .= '</tr>';
+	}
+	//echo $contenido_tabla;
+}
 
 ?>
 <!DOCTYPE html>
@@ -87,7 +112,12 @@ if(isset($_POST['enviar'])){
 	</section>
 	<section>
 		<table>
-			<tr><th id='rem'><?=$remitente?></th><th id='cor'><?=$correo?></th><th id='msg'><?=$mensaje?></th><tr>
+			<tr>
+				<th id='rem'><?=$remitente?></th>
+				<th id='cor'><?=$correo?></th>
+				<th id='msg'><?=$mensaje?></th>
+			</tr>
+			<?=$contenido_tabla ?>
 		</table>
 	</section>
 	</div>
