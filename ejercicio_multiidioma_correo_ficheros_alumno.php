@@ -28,9 +28,12 @@ require('includes/language.php');
 			</center><br><br>
 		</form>
   		<article>
-  			<h1>SECCIÓ DE CONTINGUT</h1>
-            <img src="img/bombilla.jpg">
-            <p>Aquest text s'hi troba en català i s'hi te que mostrar als dos idiomes que hi ha seleccionables a la pàgina</p>
+  			<!--lectura fichero contenido-->
+  			<?php
+					if(file_exists('includes/id_contenido.txt')){
+						readfile('includes/id_contenido.txt');
+					}
+			?>
   		</article>
 	</section>
 	<section>
