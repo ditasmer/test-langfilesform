@@ -25,6 +25,10 @@ if(isset($_POST['enviar'])){
 		if($mensaje_form == ''){
 			throw new Exception($avisomensaje, 1);	
 		}
+		//si todo ha ido bien, limpiar campos
+		$correo_form = '';
+		$nombre_form = '';
+		$mensaje_form = '';
 	} catch(Exception $e){
 		//tratamiento de errores
 		$error = $e->getMessage();
@@ -48,11 +52,11 @@ if(isset($_POST['enviar'])){
 	<section>
 		<form name='formulario' method='post' action='#'>
 			<label><?=$nombre?></label>
-			<input type='text' name='nombre_form' /><br><br><br>
+			<input type='text' name='nombre_form' value='<?=$nombre_form?>' /><br><br><br>
 			<label><?=$correo?></label>
-            <input type='email' name='correo_form' /><br><br><br>
+            <input type='email' name='correo_form' value='<?=$correo_form?>' /><br><br><br>
             <label><?=$mensaje?></label>
-			<textarea name='mensaje_form' /></textarea><br><br><br>
+			<textarea name='mensaje_form' /><?=$mensaje_form?></textarea><br><br><br>
 			<!--zona de mensajes-->
 			<span><?=$error?></span><br><br>
 			<center>
