@@ -17,14 +17,14 @@ require('includes/language.php');
     <?php include('includes/navbar.html');?>
 	<section>
 		<form name='formulario' method='post' action='#'>
-			<label>Nom</label>
+			<label><?=$nombre?></label>
 			<input type='text' name='nombre'><br><br><br>
-			<label>Correu</label>
+			<label><?=$correo?></label>
             <input type='email' name='correo'><br><br><br>
-            <label>Missatge</label>
+            <label><?=$mensaje?></label>
 			<textarea name='mensaje'></textarea><br><br><br>
 			<center>
-				<input type='submit' value='Enviar' name='enviar'><br><br>
+				<input type='submit' value='<?=$enviar?>' name='enviar'><br><br>
 			</center><br><br>
 		</form>
   		<article>
