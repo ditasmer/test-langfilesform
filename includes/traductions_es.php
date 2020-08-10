@@ -8,5 +8,6 @@ $correo = 'Correo';
 $mensaje = 'Mensaje';
 $enviar = 'Enviar';
 $remitente = 'Remitente';
+$url_contenido = 'includes/id_contenido_es.txt';
 
 ?> 

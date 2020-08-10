@@ -1,0 +1,3 @@
+<h1>SECCIÓN DE CONTENIDO</h1>
+            <img src="img/bombilla.jpg">
+            <p>Este texto está en castellano y se muestra en los dos idiomas que hay seleccionables en la página</p>

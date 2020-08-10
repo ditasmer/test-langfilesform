@@ -30,8 +30,8 @@ require('includes/language.php');
   		<article>
   			<!--lectura fichero contenido-->
   			<?php
-					if(file_exists('includes/id_contenido.txt')){
-						readfile('includes/id_contenido.txt');
+					if(file_exists($url_contenido)){
+						readfile($url_contenido);
 					}
 			?>
   		</article>
