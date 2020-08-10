@@ -11,9 +11,8 @@
 </head>
 <body>
 	<div class="contenedor">
-    <header>
-      <h2>Exercici 3 UF1844</h2>
-    </header>
+    <!--include del header-->
+    <?php include('includes/header.html');?>
     <nav>
       <a href="#">Inici</a><a href="#">Productes</a><a href="#">Contacte</a>
     </nav>
