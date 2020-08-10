@@ -13,9 +13,8 @@
 	<div class="contenedor">
     <!--include del header-->
     <?php include('includes/header.html');?>
-    <nav>
-      <a href="#">Inici</a><a href="#">Productes</a><a href="#">Contacte</a>
-    </nav>
+    <!--incude navbar-->
+    <?php include('includes/navbar.html');?>
 	<section>
 		<form name='formulario' method='post' action='#'>
 			<label>Nom</label>
