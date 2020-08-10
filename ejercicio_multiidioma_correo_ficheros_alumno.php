@@ -1,6 +1,6 @@
 ﻿<?php
-
-    
+//gestion del idioma
+require('includes/language.php');
 ?>
 <!DOCTYPE html>
 <html>
