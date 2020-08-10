@@ -38,7 +38,7 @@ require('includes/language.php');
 	</section>
 	<section>
 		<table>
-			<tr><th id='rem'>Remitent</th><th id='cor'>Correu</th><th id='msg'>Missatge</th><tr>
+			<tr><th id='rem'><?=$remitente?></th><th id='cor'><?=$correo?></th><th id='msg'><?=$mensaje?></th><tr>
 		</table>
 	</section>
 	</div>
