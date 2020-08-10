@@ -17,13 +17,13 @@ if(isset($_POST['enviar'])){
 	//validar try catch datos
 	try{
 		if($nombre_form == ''){
-			throw new Exception("Nombre obligatorio", 1);
+			throw new Exception($avisonombre, 1);
 		}
 		if($correo_form == ''){
-			throw new Exception("Correo obligatorio", 1);
+			throw new Exception($avisocorreo, 1);
 		}
 		if($mensaje_form == ''){
-			throw new Exception("Mensaje obligatorio", 1);	
+			throw new Exception($avisomensaje, 1);	
 		}
 	} catch(Exception $e){
 		//tratamiento de errores

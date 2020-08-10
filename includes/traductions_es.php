@@ -9,5 +9,9 @@ $mensaje = 'Mensaje';
 $enviar = 'Enviar';
 $remitente = 'Remitente';
 $url_contenido = 'includes/id_contenido_es.txt';
+//mensajes formulario
+$avisonombre = 'Nombre obligatorio';
+$avisocorreo = 'Correo obligatorio';
+$avisomensaje = 'Mensaje obligatorio';
 
 ?> 
