@@ -25,6 +25,19 @@ if(isset($_POST['enviar'])){
 		if($mensaje_form == ''){
 			throw new Exception($avisomensaje, 1);	
 		}
+		//guardar datos en fichero externo 
+		//construccion del mesnaje: Nom remitent; correu; missatge
+		$mensaje_nuevo = "$nombre_form; $correo_form; $mensaje_form\n";
+		//verifica si existe el fichero
+		if(file_exists('files/mensajes.txt')){
+			//Escritura avanzada de ficheros, abrir fichero
+			$fichero = fopen('files/mensajes.txt', 'a+');
+			//escribir
+			fwrite($fichero, $mensaje_nuevo);
+			//cerrar
+			fclose($fichero);
+		}
+		
 		//si todo ha ido bien, limpiar campos
 		$correo_form = '';
 		$nombre_form = '';
